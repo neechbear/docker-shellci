@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     sed \
     rsync \
-    perl \
     wget \
     openssl \
  && rm -rf /var/lib/apt/lists/*
@@ -31,7 +30,7 @@ ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERS
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS ./
 
 RUN sed -i '/packer_${PACKER_VERSION}_linux_amd64.zip/!d' packer_${PACKER_VERSION}_SHA256SUMS
-RUN sha256sum -cs packer_${PACKER_VERSION}_SHA256SUMS
+RUN sha256sum -c packer_${PACKER_VERSION}_SHA256SUMS
 RUN unzip packer_${PACKER_VERSION}_linux_amd64.zip -d /bin
 RUN rm -f packer_${PACKER_VERSION}_linux_amd64.zip
 
