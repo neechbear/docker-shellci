@@ -1,6 +1,5 @@
-# nicolaw/shellci
+# nicolaw/docker-shellci
 
-Publishes to https://hub.docker.com/r/nicolaw/shellci/.
+Shell script continuous integration Docker image.
 
-    $ docker build --rm -t nicolaw/shellci . && docker push nicolaw/shellci
-
+Published to https://hub.docker.com/r/nicolaw/docker-shellci/.
