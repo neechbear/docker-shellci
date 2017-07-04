@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     bc \
     shellcheck \
     jq \
+    go-md2man \
     bc \
     xml2 \
     curl \
